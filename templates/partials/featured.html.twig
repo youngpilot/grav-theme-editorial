@@ -10,7 +10,7 @@
                 <a href="{{ p.url }}" class="featured-title"><h2>{{ p.title }}</h2></a>
                 {% if p.header.primaryImage %}
                     {% set image = p.header.primaryImage|first %}
-                    <a href="{{ p.url }}" class="image">{{ p.media[image.name].html }} </a>
+                    <a href="{{ p.url }}" class="image">{{ p.media[image.name].html("",p.title) }} </a>
                 {% endif %}
 
                 <p>{{ p.summary(100) }}</p>
